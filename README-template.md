@@ -7,6 +7,7 @@
 
 ## :scroll: Description
 <!--- Describe your app in one or two sentences -->
+It's a simple pet adoption app, for the #AndroidDevChallenge of Jetpack Compose.
 
 
 ## :bulb: Motivation and Context

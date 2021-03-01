@@ -22,6 +22,7 @@ buildscript {
     repositories {
         google()
         jcenter()
+        mavenCentral()
     }
 
     dependencies {
@@ -38,6 +39,7 @@ subprojects {
     repositories {
         google()
         jcenter()
+        mavenCentral()
     }
 
     apply plugin: 'com.diffplug.spotless'
