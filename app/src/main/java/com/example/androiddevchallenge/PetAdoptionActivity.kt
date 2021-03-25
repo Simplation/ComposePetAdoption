@@ -48,5 +48,3 @@ class PetAdoptionActivity : AppCompatActivity() {
 fun MyApp() {
     Home()
 }
-
-
