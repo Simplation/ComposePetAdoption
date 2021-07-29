@@ -53,15 +53,18 @@ fun BodyContent(
     snackBarHostState: SnackbarHostState
 ) {
     val viewModel: PetAdoptionViewModel = viewModel()
+    val currentPet = viewModel.currentPet
     PetList(pets = viewModel.pets) { pet ->
-        viewModel.showPet(pet)
+        if (currentPet == null) {
+            viewModel.showPet(pet)
+        }
     }
 
-    val pet = viewModel.currentPet
-    if (pet != null) {
-        PetDetail(pet = pet) {
+
+    if (currentPet != null) {
+        PetDetail(pet = currentPet) {
             coroutineScope.launch {
-                snackBarHostState.showSnackbar("You have adopted ${pet.name}")
+                snackBarHostState.showSnackbar("You have adopted ${currentPet.name}")
             }
         }
     }
