@@ -60,7 +60,6 @@ fun BodyContent(
         }
     }
 
-
     if (currentPet != null) {
         PetDetail(pet = currentPet) {
             coroutineScope.launch {
