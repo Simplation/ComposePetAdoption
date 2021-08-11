@@ -15,9 +15,9 @@
  */
 package com.example.androiddevchallenge
 
-import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import org.junit.Rule
+import androidx.test.platform.app.InstrumentationRegistry
+import org.junit.Assert
 import org.junit.Test
 import org.junit.runner.RunWith
 
@@ -28,11 +28,11 @@ import org.junit.runner.RunWith
  */
 @RunWith(AndroidJUnit4::class)
 class ExampleInstrumentedTest {
-    @get:Rule
-    val composeTestRule = createAndroidComposeRule<PetAdoptionActivity>()
 
     @Test
-    fun sampleTest() {
-        // Add instrumented tests here
+    fun useAppContext() {
+        // Context of the app under test.
+        val appContext = InstrumentationRegistry.getInstrumentation().targetContext
+        Assert.assertEquals("com.example.androiddevchallenge", appContext.packageName)
     }
 }
