@@ -33,6 +33,7 @@ import kotlinx.coroutines.launch
 fun Home() {
     val snackBarHostState = SnackbarHostState()
     val coroutineScope = rememberCoroutineScope()
+
     Scaffold(
         topBar = {
             TopAppBar(
